@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryED_Manassero
 {
-    public partial class Form1 : Form
+    public partial class frmPila : Form
     {
-        public Form1()
+        public frmPila()
         {
             InitializeComponent();
         }

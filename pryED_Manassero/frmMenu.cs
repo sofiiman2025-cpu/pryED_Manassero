@@ -41,5 +41,10 @@ namespace pryED_Manassero
             pila.ShowDialog();
             this.Close();
         }
+
+        private void lDEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

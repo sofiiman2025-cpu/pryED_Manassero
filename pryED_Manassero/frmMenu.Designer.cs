@@ -107,8 +107,8 @@
             this.arbolesToolStripMenuItem,
             this.grafosToolStripMenuItem});
             this.estNoLinealesToolStripMenuItem.Name = "estNoLinealesToolStripMenuItem";
-            this.estNoLinealesToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
-            this.estNoLinealesToolStripMenuItem.Text = "Est. No Lineales";
+            this.estNoLinealesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.estNoLinealesToolStripMenuItem.Text = "Estructurales No Lineales";
             // 
             // arbolesToolStripMenuItem
             // 
@@ -144,7 +144,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(437, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(499, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -224,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 462);
+            this.ClientSize = new System.Drawing.Size(499, 462);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenu";

@@ -16,10 +16,24 @@ namespace pryED_Manassero
         {
             InitializeComponent();
         }
+        clsCola objCola = new clsCola();
+        clsNodo objNodo = new clsNodo();
+
+
+
+
 
         private void frmCola_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            objNodo.Nombre1 = txtNombre.Text;
+
+            objCola.Agregar(objNodo);
+            objCola.Recorrer(lstLista);
         }
     }
 }

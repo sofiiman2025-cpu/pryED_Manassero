@@ -40,6 +40,7 @@ namespace pryED_Manassero
             {
                 lstLista.Items.Add(aux.Codigo1);
                 aux = aux.Siguiente;
+
             }
 
         }

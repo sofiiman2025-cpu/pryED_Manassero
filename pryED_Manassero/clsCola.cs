@@ -38,7 +38,7 @@ namespace pryED_Manassero
             lstLista.Items.Clear();
             while (aux != null)
             {
-                lstLista.Items.Add(aux.Codigo1);
+                lstLista.Items.Add($"{aux.Codigo1} - {aux.Nombre1} - {aux.Tramite1}");
                 aux = aux.Siguiente;
 
             }

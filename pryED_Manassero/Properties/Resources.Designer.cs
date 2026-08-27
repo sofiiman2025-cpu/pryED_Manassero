@@ -63,6 +63,16 @@ namespace pryED_Manassero.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_27_ago_2026__12_00_25_p_m_ {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 27 ago 2026, 12_00_25 p.m.", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2026_08_20_at_11_44_21 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2026-08-20 at 11.44.21", resourceCulture);

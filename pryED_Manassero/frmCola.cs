@@ -38,7 +38,10 @@ namespace pryED_Manassero
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+           objNodo.Nombre1 = objCola.Primero1.Nombre1;
+            objCola.Eliminar();
+            objCola.Recorrer(lstLista);
+            objCola.Recorrer(dgvGrilla2);
         }
     }
 }

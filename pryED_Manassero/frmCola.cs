@@ -35,5 +35,10 @@ namespace pryED_Manassero
             objCola.Agregar(objNodo);
             objCola.Recorrer(lstLista);
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

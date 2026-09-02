@@ -46,5 +46,12 @@ namespace pryED_Manassero
         {
 
         }
+
+        private void lSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaSimple listaSimple = new frmListaSimple();
+            listaSimple.ShowDialog();
+            this.Close();
+        }
     }
 }

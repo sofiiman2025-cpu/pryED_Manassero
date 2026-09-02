@@ -32,6 +32,14 @@ namespace pryED_Manassero
 
         }
 
+        public void Eliminar()
+        {
+            if (Primero != null)
+            {
+                Primero = Primero.Siguiente;
+            }
+        }
+
         public void Recorrer(ListBox lstLista) 
         {
             clsNodo aux = Primero;
@@ -43,6 +51,17 @@ namespace pryED_Manassero
 
             }
 
+        }
+
+        public void Recorrer(DataGridView dgvGrilla)
+        {
+            clsNodo aux = Primero;
+            dgvGrilla.Rows.Clear();
+            while (aux != null)
+            {
+                dgvGrilla.Rows.Add(aux.Codigo1, aux.Nombre1, aux.Tramite1);
+                aux = aux.Siguiente;
+            }
         }
     }
 }

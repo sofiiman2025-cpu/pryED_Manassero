@@ -16,5 +16,35 @@ namespace pryED_Manassero
         {
             InitializeComponent();
         }
+        clsListaSimple Lista = new clsListaSimple();
+
+        private void frmListaSimple_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodo Persona = new clsNodo();
+            Persona.Codigo1 = Convert.ToInt32(txtCodigo.Text);
+            Persona.Nombre1 = txtNombre.Text;
+            Persona.Tramite1 = txtTramite.Text;
+           Lista.Agregar(Persona);
+            Losrecorrer();
+            limpiarTodo();
+
+        }
+        private void limpiarTodo()
+        {
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtTramite.Clear();
+            txtCodigo.Focus();
+        }
+        private void Losrecorrer()
+        {
+            Lista.Recorrer(lstLista);
+        }
+        
     }
 }

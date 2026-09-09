@@ -37,9 +37,9 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.grpEliminar = new System.Windows.Forms.GroupBox();
-            this.lblCodigo2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblCodigo2 = new System.Windows.Forms.Label();
             this.grpAgrupacion = new System.Windows.Forms.GroupBox();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +79,7 @@
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTramite
             // 
@@ -141,14 +142,14 @@
             this.grpEliminar.TabStop = false;
             this.grpEliminar.Text = "Elemento a eliminar";
             // 
-            // lblCodigo2
+            // btnEliminar
             // 
-            this.lblCodigo2.AutoSize = true;
-            this.lblCodigo2.Location = new System.Drawing.Point(16, 33);
-            this.lblCodigo2.Name = "lblCodigo2";
-            this.lblCodigo2.Size = new System.Drawing.Size(40, 13);
-            this.lblCodigo2.TabIndex = 1;
-            this.lblCodigo2.Text = "Código";
+            this.btnEliminar.Location = new System.Drawing.Point(107, 150);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -158,14 +159,14 @@
             this.comboBox1.Size = new System.Drawing.Size(104, 21);
             this.comboBox1.TabIndex = 2;
             // 
-            // btnEliminar
+            // lblCodigo2
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(107, 150);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 3;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.lblCodigo2.AutoSize = true;
+            this.lblCodigo2.Location = new System.Drawing.Point(16, 33);
+            this.lblCodigo2.Name = "lblCodigo2";
+            this.lblCodigo2.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigo2.TabIndex = 1;
+            this.lblCodigo2.Text = "Código";
             // 
             // grpAgrupacion
             // 
@@ -244,6 +245,7 @@
             this.Name = "frmListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListaSimple";
+            this.Load += new System.EventHandler(this.frmListaSimple_Load);
             this.grpElemento.ResumeLayout(false);
             this.grpElemento.PerformLayout();
             this.grpEliminar.ResumeLayout(false);

@@ -12,7 +12,7 @@ namespace pryED_Manassero
 
         private clsNodo Primero;
         private clsNodo Ultimo;
-        private clsNodo Nuevo; 
+        private clsNodo Nuevo;
 
 
         private int Codigo;
@@ -21,10 +21,25 @@ namespace pryED_Manassero
 
         public clsNodo Siguiente;
 
+        // Campos del Nodo
+        private Int32 cod;
+        private String nom;
+        private String tra;
+        private clsNodo sig;
+        private clsNodo ant; // Campo nuevo para el enlace anterior
+
+        // Propiedad Anterior (nueva)
+        public clsNodo Anterior
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
+
+
         public int Codigo1 { get => Codigo; set => Codigo = value; }
         public string Nombre1 { get => Nombre; set => Nombre = value; }
         public string Tramite1 { get => Tramite; set => Tramite = value; }
-
+        
 
         public void Agregar(clsNodo Nuevo)
         {
@@ -59,7 +74,7 @@ namespace pryED_Manassero
             clsNodo aux = Primero;
             lst.Items.Clear();
             while (aux != null)
-            { 
+            {
                 lst.Items.Add($"{aux.Codigo} {aux.Nombre} {aux.Tramite}");
                 aux = aux.Siguiente;
             }
@@ -76,11 +91,22 @@ namespace pryED_Manassero
                 dgv.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
                 aux = aux.Siguiente;
             }
-        
+
         }
+
+        public void Recorrer(ComboBox cbo)
+        {
+            clsNodo aux = Primero;
+            cbo.Items.Clear();
+            while (aux != null)
+            {
+                cbo.Items.Add($"{aux.Codigo} {aux.Nombre} {aux.Tramite}");
+                aux = aux.Siguiente;
+            }
+
+        }
+
+       
+
     }
-
-    
-
-    
 }

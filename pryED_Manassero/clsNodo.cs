@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace pryED_Manassero
 {
-    internal class clsNodo
+    public class clsNodo
     {
 
         private clsNodo Primero;

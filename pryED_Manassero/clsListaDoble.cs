@@ -125,5 +125,10 @@ namespace pryED_Manassero
                 aux = aux.Anterior;
             }
         }
+
+        internal void Recorrer(ListBox lstLista)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

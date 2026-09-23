@@ -49,9 +49,9 @@ namespace pryED_Manassero
             nodo.Nombre1 = txtNombre.Text;
             nodo.Tramite1 = txtTramite.Text;
 
-            nodo.Agregar(nodo);
-            nodo.Recorrer(lstLista);
-            nodo.Recorrer(dgvGrilla);
+            pila.Agregar(nodo);
+            pila.Recorrer(lstLista);
+            pila.Recorrer(dgvGrilla);
 
             txtCodigo.Clear();
             txtNombre.Clear();

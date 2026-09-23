@@ -45,26 +45,31 @@ namespace pryED_Manassero
                 }
             }
 
-            public void Eliminar(Int32 codigo)
+
+        public bool Eliminar(Int32 codigo)
+        {
+            if (Primero == null) return false;           // lista vacía
+
+            if (Primero.Codigo1 == codigo)
             {
-                if (Primero.Codigo1 == codigo)
-                {
-                    Primero = Primero.Siguiente;
-                }
-                else
-                {
-                    clsNodo ant = Primero;
-                    clsNodo aux = Primero;
-                    while (aux.Codigo1 != codigo)
-                    {
-                        ant = aux;
-                        aux = aux.Siguiente;
-                    }
-                    ant.Siguiente = aux.Siguiente;
-                }
+                Primero = Primero.Siguiente;
+                return true;
             }
 
-            public void Recorrer(DataGridView grilla)
+            clsNodo ant = Primero;
+            clsNodo aux = Primero;
+            while (aux != null && aux.Codigo1 != codigo)  // corta si llega a null
+            {
+                ant = aux;
+                aux = aux.Siguiente;
+            }
+
+            if (aux == null) return false;                // no se encontró el código
+            ant.Siguiente = aux.Siguiente;
+            return true;
+        }
+
+        public void Recorrer(DataGridView grilla)
             {
                 clsNodo aux = Primero;
                 grilla.Rows.Clear();

@@ -41,10 +41,33 @@ namespace pryED_Manassero
             txtTramite.Clear();
             txtCodigo.Focus();
         }
+
         private void Losrecorrer()
         {
             Lista.Recorrer(lstLista);
+            Lista.Recorrer(dgvGrilla);
         }
-        
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == "")
+            {
+                MessageBox.Show("Ingresá un código.");
+                return;
+            }
+
+            bool eliminado = Lista.Eliminar(Convert.ToInt32(txtCodigo.Text));
+            if (eliminado)
+            {
+                Lista.Recorrer(lstLista);
+                Lista.Recorrer(dgvGrilla);
+                txtCodigo.Clear(); txtNombre.Clear(); txtTramite.Clear();
+            }
+            else
+            {
+                MessageBox.Show("No existe un elemento con ese código.");
+            }
+        }
     }
-}
+    }
+

@@ -44,7 +44,9 @@ namespace pryED_Manassero
 
         private void lDEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmListaDoble listaDoble = new frmListaDoble();
+            listaDoble.ShowDialog();
+            this.Close();
         }
 
         private void lSToolStripMenuItem_Click(object sender, EventArgs e)

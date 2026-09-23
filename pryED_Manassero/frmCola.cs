@@ -30,10 +30,16 @@ namespace pryED_Manassero
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            clsNodo objNodo = new clsNodo();     // nuevo nodo en CADA clic
+            objNodo.Codigo1 = Convert.ToInt32(txtCodigo.Text);
             objNodo.Nombre1 = txtNombre.Text;
+            objNodo.Tramite1 = txtTramite.Text;
 
             objCola.Agregar(objNodo);
             objCola.Recorrer(lstLista);
+            objCola.Recorrer(dgvGrilla2);
+
+            txtCodigo.Clear(); txtNombre.Clear(); txtTramite.Clear();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -42,6 +48,17 @@ namespace pryED_Manassero
             objCola.Eliminar();
             objCola.Recorrer(lstLista);
             objCola.Recorrer(dgvGrilla2);
+
+            if (objCola.Primero1 != null)
+            {
+                objCola.Eliminar();
+                objCola.Recorrer(lstLista);
+                objCola.Recorrer(dgvGrilla2);
+            }
+            else
+            {
+                MessageBox.Show("La cola está vacía.");
+            }
         }
     }
 }

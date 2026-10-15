@@ -187,18 +187,21 @@
             this.mostrarUnaTablaToolStripMenuItem.Name = "mostrarUnaTablaToolStripMenuItem";
             this.mostrarUnaTablaToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.mostrarUnaTablaToolStripMenuItem.Text = "Mostrar una tabla";
+            this.mostrarUnaTablaToolStripMenuItem.Click += new System.EventHandler(this.mostrarUnaTablaToolStripMenuItem_Click);
             // 
             // consultaDeBaseDeDatosToolStripMenuItem
             // 
             this.consultaDeBaseDeDatosToolStripMenuItem.Name = "consultaDeBaseDeDatosToolStripMenuItem";
             this.consultaDeBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.consultaDeBaseDeDatosToolStripMenuItem.Text = "Consulta de base de datos";
+            this.consultaDeBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.consultaDeBaseDeDatosToolStripMenuItem_Click);
             // 
             // operacionesEnBaseDeDatosToolStripMenuItem
             // 
             this.operacionesEnBaseDeDatosToolStripMenuItem.Name = "operacionesEnBaseDeDatosToolStripMenuItem";
             this.operacionesEnBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.operacionesEnBaseDeDatosToolStripMenuItem.Text = "Operaciones en base de datos";
+            this.operacionesEnBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.operacionesEnBaseDeDatosToolStripMenuItem_Click);
             // 
             // consultasVariasConOperacionesToolStripMenuItem
             // 

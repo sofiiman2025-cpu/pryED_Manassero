@@ -55,5 +55,24 @@ namespace pryED_Manassero
             listaSimple.ShowDialog();
             this.Close();
         }
+
+        private void operacionesEnBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mostrarUnaTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMostrarTabla mostrarTabla = new frmMostrarTabla();
+            mostrarTabla.ShowDialog();
+            this.Close();
+        }
+
+        private void consultaDeBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaBD consultaBD = new frmConsultaBD();
+            consultaBD.ShowDialog();
+            this.Close();
+        }
     }
 }

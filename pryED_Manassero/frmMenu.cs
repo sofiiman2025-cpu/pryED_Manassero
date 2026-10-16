@@ -72,7 +72,7 @@ namespace pryED_Manassero
         {
             frmConsultaBD consultaBD = new frmConsultaBD();
             consultaBD.ShowDialog();
-            this.Close();
+           this.Close();
         }
     }
 }

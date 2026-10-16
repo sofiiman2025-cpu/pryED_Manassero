@@ -16,5 +16,12 @@ namespace pryED_Manassero
         {
             InitializeComponent();
         }
+
+        private void volverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

@@ -35,5 +35,12 @@ namespace pryED_Manassero
             cmbLista.Items.Add("Libro");
             cmbLista.Items.Add("País");
         }
+
+        private void vOLVERToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+            menu.Show();
+            
+        }
     }
 }

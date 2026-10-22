@@ -44,21 +44,16 @@ namespace pryED_Manassero
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-           objNodo.Nombre1 = objCola.Primero1.Nombre1;
+            if (objCola.Primero1 == null)
+            {
+                MessageBox.Show("La cola está vacía.");
+                return;
+            }
+
+            objNodo.Nombre1 = objCola.Primero1.Nombre1;
             objCola.Eliminar();
             objCola.Recorrer(lstLista);
             objCola.Recorrer(dgvGrilla2);
-
-            if (objCola.Primero1 != null)
-            {
-                objCola.Eliminar();
-                objCola.Recorrer(lstLista);
-                objCola.Recorrer(dgvGrilla2);
-            }
-            else
-            {
-                MessageBox.Show("La cola está vacía.");
-            }
         }
     }
 }

@@ -37,6 +37,11 @@ namespace pryED_Manassero
             if (Primero != null)
             {
                 Primero = Primero.Siguiente;
+
+                if (Primero == null)
+                {
+                    Ultimo = null;
+                }
             }
         }
 

@@ -70,41 +70,50 @@ namespace pryED_Manassero
         }
         public void Eliminar(Int32 Codigo)
         {
-            if (Primero.Codigo1 == Codigo && Ultimo == Primero)
+            if (Primero == null)
             {
-                Primero = null;
-                Ultimo = null;
+                return;
             }
-            else
+
+            clsNodo aux = Primero;
+
+            while (aux != null && aux.Codigo1 != Codigo)
             {
-                if (Primero.Codigo1 == Codigo)
+                aux = aux.Siguiente;
+            }
+
+            if (aux == null)
+            {
+                return;
+            }
+
+            if (aux == Primero)
+            {
+                Primero = Primero.Siguiente;
+
+                if (Primero != null)
                 {
-                    Primero = Primero.Siguiente;
                     Primero.Anterior = null;
                 }
                 else
                 {
-                    if (Ultimo.Codigo1 == Codigo)
-                    {
-                        Ultimo = Ultimo.Anterior;
-                        Ultimo.Siguiente = null;
-                    }
-                    else
-                    {
-                        clsNodo aux = Primero;
-                        clsNodo ant = Primero;
-                        while (aux.Codigo1 < Codigo)
-                        {
-                            ant = aux;
-                            aux = aux.Siguiente;
-                        }
-                        ant.Siguiente = aux.Siguiente;
-                        aux = aux.Siguiente;
-                        aux.Anterior = ant;
-                    }
+                    Ultimo = null;
                 }
+
+                return;
             }
+
+            if (aux == Ultimo)
+            {
+                Ultimo = Ultimo.Anterior;
+                Ultimo.Siguiente = null;
+                return;
+            }
+
+            aux.Anterior.Siguiente = aux.Siguiente;
+            aux.Siguiente.Anterior = aux.Anterior;
         }
+
         public void Recorrer(DataGridView Grilla)
         {
             clsNodo aux = Primero;
@@ -128,7 +137,14 @@ namespace pryED_Manassero
 
         internal void Recorrer(ListBox lstLista)
         {
-            throw new NotImplementedException();
+            clsNodo aux = Primero;
+            lstLista.Items.Clear();
+
+            while (aux != null)
+            {
+                lstLista.Items.Add($"{aux.Codigo1} {aux.Nombre1} {aux.Tramite1}");
+                aux = aux.Siguiente;
+            }
         }
     }
 }

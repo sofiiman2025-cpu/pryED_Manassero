@@ -44,8 +44,15 @@ namespace pryED_Manassero
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(txtCodigo.Text, out int codigo))
+            {
+                MessageBox.Show("Ingresá un código numérico.");
+                txtCodigo.Focus();
+                return;
+            }
+
             clsNodo nodo = new clsNodo();
-            nodo.Codigo1 = Convert.ToInt32(txtCodigo.Text);
+            nodo.Codigo1 = codigo;
             nodo.Nombre1 = txtNombre.Text;
             nodo.Tramite1 = txtTramite.Text;
 

@@ -69,7 +69,7 @@ namespace pryED_Manassero
                 DataSet datos = BD.Listar(sql);
                 dgvMostrar.DataSource = datos.Tables[0];
             }
-            txtOperacionesSQL.Text = $"{Consulta}:\r\n{sql}";
+            txtOperacionesSQL.Text = $"{Consulta}:\r\n{sql}"; 
         }
 
     }

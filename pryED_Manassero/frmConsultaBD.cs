@@ -23,5 +23,17 @@ namespace pryED_Manassero
             menu.Show();
             this.Hide();
         }
+
+        private void dgvConsultaDos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            clsBaseDatos bd = new clsBaseDatos();
+            bd.Listar(dgvConsultaDos, lstConsulta.Text);
+
+        }
     }
 }

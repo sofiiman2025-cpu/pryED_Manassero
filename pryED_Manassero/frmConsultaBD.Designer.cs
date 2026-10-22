@@ -29,55 +29,33 @@
         private void InitializeComponent()
         {
             this.dgvConsultaDos = new System.Windows.Forms.DataGridView();
-            this.dgvConsultaUno = new System.Windows.Forms.DataGridView();
             this.btnListar = new System.Windows.Forms.Button();
-            this.lblConsulta = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lstConsulta = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaDos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaUno)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvConsultaDos
             // 
             this.dgvConsultaDos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultaDos.Location = new System.Drawing.Point(116, 378);
-            this.dgvConsultaDos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvConsultaDos.Location = new System.Drawing.Point(54, 268);
             this.dgvConsultaDos.Name = "dgvConsultaDos";
             this.dgvConsultaDos.RowHeadersWidth = 51;
-            this.dgvConsultaDos.Size = new System.Drawing.Size(703, 242);
+            this.dgvConsultaDos.Size = new System.Drawing.Size(527, 197);
             this.dgvConsultaDos.TabIndex = 0;
-            // 
-            // dgvConsultaUno
-            // 
-            this.dgvConsultaUno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultaUno.Location = new System.Drawing.Point(117, 69);
-            this.dgvConsultaUno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgvConsultaUno.Name = "dgvConsultaUno";
-            this.dgvConsultaUno.RowHeadersWidth = 51;
-            this.dgvConsultaUno.Size = new System.Drawing.Size(701, 242);
-            this.dgvConsultaUno.TabIndex = 1;
+            this.dgvConsultaDos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultaDos_CellContentClick);
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(694, 319);
-            this.btnListar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnListar.Location = new System.Drawing.Point(486, 225);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(124, 28);
+            this.btnListar.Size = new System.Drawing.Size(93, 23);
             this.btnListar.TabIndex = 2;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
-            // 
-            // lblConsulta
-            // 
-            this.lblConsulta.AutoSize = true;
-            this.lblConsulta.Location = new System.Drawing.Point(113, 37);
-            this.lblConsulta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblConsulta.Name = "lblConsulta";
-            this.lblConsulta.Size = new System.Drawing.Size(106, 16);
-            this.lblConsulta.TabIndex = 3;
-            this.lblConsulta.Text = "Consulta en SQL";
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // menuStrip1
             // 
@@ -86,33 +64,39 @@
             this.volverToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(842, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(593, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // volverToolStripMenuItem
             // 
             this.volverToolStripMenuItem.Name = "volverToolStripMenuItem";
-            this.volverToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.volverToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.volverToolStripMenuItem.Text = "Volver";
             this.volverToolStripMenuItem.Click += new System.EventHandler(this.volverToolStripMenuItem_Click);
             // 
+            // lstConsulta
+            // 
+            this.lstConsulta.FormattingEnabled = true;
+            this.lstConsulta.Location = new System.Drawing.Point(52, 46);
+            this.lstConsulta.Name = "lstConsulta";
+            this.lstConsulta.Size = new System.Drawing.Size(527, 173);
+            this.lstConsulta.TabIndex = 5;
+            // 
             // frmConsultaBD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 633);
-            this.Controls.Add(this.lblConsulta);
+            this.ClientSize = new System.Drawing.Size(593, 474);
+            this.Controls.Add(this.lstConsulta);
             this.Controls.Add(this.btnListar);
-            this.Controls.Add(this.dgvConsultaUno);
             this.Controls.Add(this.dgvConsultaDos);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmConsultaBD";
             this.Text = "frmConsultaBD";
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaDos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaUno)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -123,10 +107,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvConsultaDos;
-        private System.Windows.Forms.DataGridView dgvConsultaUno;
         private System.Windows.Forms.Button btnListar;
-        private System.Windows.Forms.Label lblConsulta;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem volverToolStripMenuItem;
+        private System.Windows.Forms.ListBox lstConsulta;
     }
 }

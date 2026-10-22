@@ -65,6 +65,12 @@
     <Compile Include="frmConsultaBD.Designer.cs">
       <DependentUpon>frmConsultaBD.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultasOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultasOperaciones.Designer.cs">
+      <DependentUpon>frmConsultasOperaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListaDoble.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaBD.resx">
       <DependentUpon>frmConsultaBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultasOperaciones.resx">
+      <DependentUpon>frmConsultasOperaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaDoble.resx">
       <DependentUpon>frmListaDoble.cs</DependentUpon>

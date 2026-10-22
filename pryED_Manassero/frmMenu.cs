@@ -58,7 +58,9 @@ namespace pryED_Manassero
 
         private void operacionesEnBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmConsultasOperaciones consultasOperaciones = new frmConsultasOperaciones();
+            consultasOperaciones.ShowDialog();
+            this.Close();
         }
 
         private void mostrarUnaTablaToolStripMenuItem_Click(object sender, EventArgs e)
